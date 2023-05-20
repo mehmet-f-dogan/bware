@@ -1,0 +1,35 @@
+---
+import type { CollectionEntry } from "astro:content";
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import FormattedDate from "../components/FormattedDate.astro";
+
+type Props = CollectionEntry<"digs">["data"];
+
+const { title, description, pubDate } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+		<style>
+			* {
+				text-transform: lowercase;
+			}
+			.title {
+				font-size: 2em;
+			}
+		</style>
+	</head>
+
+	<body>
+		<Header />
+		<main>
+			<article>
+				<h1 class="title">{title}</h1>
+				<FormattedDate date={pubDate} />
+				<slot />
+			</article>
+		</main>
+	</body>
+</html>

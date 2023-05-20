@@ -6,12 +6,17 @@ export interface Props {
 const { date } = Astro.props;
 ---
 
+<style>
+	time {
+		text-transform: lowercase;
+	}
+</style>
 <time datetime={date.toISOString()}>
 	{
-		date.toLocaleDateString('en-us', {
-			year: 'numeric',
-			month: 'short',
-			day: 'numeric',
+		date.toLocaleDateString("en-us", {
+			year: "numeric",
+			month: "short",
+			day: "numeric",
 		})
 	}
 </time>

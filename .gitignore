@@ -5,6 +5,7 @@ dist/
 
 # dependencies
 node_modules/
+.yarn/
 
 # logs
 npm-debug.log*
@@ -19,3 +20,13 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+#deployment
+.vercelignore
+
+#content
+*.md
+!first-post.md
+*.jpg
+*.jpeg
+*.png
