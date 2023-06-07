@@ -1,5 +1,5 @@
 ---
-title: "First post"
+title: "lipsum"
 description: "Lorem ipsum dolor sit amet"
 pubDate: "May 20 2023"
 ---
